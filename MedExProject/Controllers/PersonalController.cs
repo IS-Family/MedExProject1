@@ -9,7 +9,7 @@ namespace MedExProject.Controllers
     public class PersonalController : Controller
     {
         // GET: Personal
-        public ActionResult Index()
+        public ActionResult Personal()
         {
             return View();
         }
