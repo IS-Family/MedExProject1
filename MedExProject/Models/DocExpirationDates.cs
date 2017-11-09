@@ -10,8 +10,6 @@ namespace MedExProject.Models
     [Table("DocExpirationDates")]
     public class DocExpirationDates
     {
-        [ForeignKey("Doctor")]
-        public int DoctorID { get; set; }
         [Key]
         public DateTime MedicalLicenseExpirDate { get; set; }
         public DateTime DEACertExpirDate { get; set; }
@@ -22,5 +20,8 @@ namespace MedExProject.Models
         public DateTime BusinessLicenseForPractExpirDate { get; set; }
         public DateTime DriversLicenseExpirDate { get; set; }
 
+        [ForeignKey("Doctor")]
+        public virtual int DoctorID { get; set; }
+       
     }
 }
