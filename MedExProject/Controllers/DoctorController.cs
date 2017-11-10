@@ -17,10 +17,10 @@ namespace MedExProject.Controllers
         [HttpPost]
         public String enterData(FormCollection form)
         {
-            String fName = form["Email address"].ToString();
-            String lName = form["Email address"].ToString();
-            String  phoneNumber = form["Email address"].ToString();
-            String email = form["Email address"].ToString();
+            String fName = form["First Name"].ToString();
+            String lName = form["Last Name"].ToString();
+            String  telephone = form["Telephone"].ToString();
+            String email = form["Email"].ToString();
             return "Signing in : " + email;
         }
 
