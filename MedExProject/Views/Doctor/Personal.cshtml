@@ -3,7 +3,15 @@
     ViewBag.Title = "Personal";
 }
 
-@using (Html.BeginForm("enterData", "Doctor", FormMethod.Post, new { @class = "form-enterPersonal" }))
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Doctor Sign-Up</li>
+    </ol>
+</nav>
+
+
+@using (Html.BeginForm("Personal", "Doctor", FormMethod.Post, new { @class = "form-enterPersonal" }))
 {
     <h2 class="form-enterPersonal-heading">Please Enter Personal Info</h2><br/>
     <p>First Name <br />
@@ -24,5 +32,4 @@
         <label for="inputLast" class="sr-only">Last</label>
         @Html.TextBox("Email", "", new { type = "Email", id = "inputEmail", @class = "form-control", placeholder = "Email", required = true, autofocus = true })
     </p>
-    <p><br/><a type = "submit" class="btn btn-primary">Submit and Continue</a></p>
 }
