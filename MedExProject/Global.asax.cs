@@ -15,7 +15,7 @@ namespace MedExProject
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<MedEx>(null);
+            Database.SetInitializer<MedExContext>(null);
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

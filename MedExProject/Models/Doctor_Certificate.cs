@@ -7,16 +7,16 @@ using System.Web;
 
 namespace MedExProject.Models
 {
-    [Table("Doctor")]
-    public class Doctor
+    [Table("Doctor_Certificate")]
+    public class Doctor_Certificate
     {
         [Key]
+        [Column(Order = 0)]
         public int DoctorID { get; set; }
-        public String DoctorFirstName { get; set; }
-        public String DoctorLastName { get; set; }
-        public String DoctorPhone { get; set; }
-        [EmailAddress]
-        public String DoctorEmail { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        public int CertID { get; set; }
 
+        public DateTime ExpirDate { get; set; }
     }
 }
