@@ -16,7 +16,7 @@
     <h2 class="form-enterPersonal-heading">Please Enter Personal Info</h2><br/>
     <p>First Name <br />
         <label for="inputFirst" class="sr-only">First</label>
-        @Html.TextBox("First Name", "", new { type = "firstName", id = "inputFirstName", @class = "form-control", placeholder = "First Name", required = true, autofocus = true })
+        @Html.TextBox("First Name", "", new { type = "FirstName", id = "inputFirstName", @class = "form-control", placeholder = "First Name", required = true, autofocus = true })
     </p>
     <p>Last Name <br />
         <label for="inputLast" class="sr-only">Last</label>
@@ -31,5 +31,7 @@
         Email <br />
         <label for="inputLast" class="sr-only">Last</label>
         @Html.TextBox("Email", "", new { type = "Email", id = "inputEmail", @class = "form-control", placeholder = "Email", required = true, autofocus = true })
-    </p>
+    </p><br/>
+
+    <p><a class="btn btn-primary" href="~/Doctor/License">Submit and Continue</a></p>
 }

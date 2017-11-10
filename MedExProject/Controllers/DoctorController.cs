@@ -19,7 +19,7 @@ namespace MedExProject.Controllers
         {
             String fName = form["First Name"].ToString();
             String lName = form["Last Name"].ToString();
-            String  telephone = form["Telephone"].ToString();
+            String  phone = form["Phone Number"].ToString();
             String email = form["Email"].ToString();
             return "Signing in : " + email;
         }
