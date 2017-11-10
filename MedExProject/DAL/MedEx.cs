@@ -1,20 +1,22 @@
-﻿using System;
+﻿using MedExProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MedExProject.Models;
+
 using System.Data.Entity;
 
 namespace MedExProject.DAL
 {
-    public class MedEx : DbContext
+    public class MedExContext : DbContext
     {
-        public MedEx() : base("MedEx")
+        public MedExContext() : base("MedExContext")
         {
 
         }
 
         public DbSet<Doctor> Doctors { get; set; }
-        public DbSet<DocExpirationDates> DocExpirationDatesEach { get; set; }
+        public DbSet<Certificate> Certificates { get; set; }
+        public DbSet<Doctor_Certificate> Doctors_Certificates { get; set; }
     }
 }
