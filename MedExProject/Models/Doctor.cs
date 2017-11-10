@@ -12,6 +12,7 @@ namespace MedExProject.Models
     public class Doctor
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DoctorID { get; set; }
         [DisplayName("First Name")]
         public String DoctorFirstName { get; set; }
