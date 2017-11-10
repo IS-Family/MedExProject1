@@ -12,11 +12,12 @@ namespace MedExProject.Models
     public class Doctor
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DoctorID { get; set; }
         [DisplayName("First Name")]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please")]
         public String DoctorFirstName { get; set; }
         [DisplayName("Last Name")]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please")]
         public String DoctorLastName { get; set; }
         [DisplayName("Phone")]
         public String DoctorPhone { get; set; }
