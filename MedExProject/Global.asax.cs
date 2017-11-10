@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using MedExProject.Models;
+using MedExProject.DAL;
 
 namespace MedExProject
 {
@@ -12,6 +15,8 @@ namespace MedExProject
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<MedExContext>(null);
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
