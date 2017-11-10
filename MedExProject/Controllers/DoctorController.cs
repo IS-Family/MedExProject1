@@ -8,13 +8,13 @@ namespace MedExProject.Controllers
 {
     public class DoctorController : Controller
     {
-        // GET: Doctor
+        // GET: personal information
         public ActionResult Personal()
         {
             return View();
         }
 
-        // GET: Doctor
+        // GET: license information
         public ActionResult License()
         {
             return View();
