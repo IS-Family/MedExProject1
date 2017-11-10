@@ -3,5 +3,25 @@
     ViewBag.Title = "Personal";
 }
 
-<h2>Personal</h2>
-
+@using (Html.BeginForm("Personal", "Doctor", FormMethod.Post, new { @class = "form-enterPersonal" }))
+{
+    <h2 class="form-enterPersonal-heading">Please Enter Personal Info</h2><br/>
+    <p>First Name <br />
+        <label for="inputFirst" class="sr-only">First</label>
+        @Html.TextBox("First Name", "", new { type = "firstName", id = "inputFirstName", @class = "form-control", placeholder = "First Name", required = true, autofocus = true })
+    </p>
+    <p>Last Name <br />
+        <label for="inputLast" class="sr-only">Last</label>
+        @Html.TextBox("Last Name", "", new { type = "LastName", id = "inputLastName", @class = "form-control", placeholder = "Last Name", required = true, autofocus = true })
+    </p>
+    <p>
+        Phone Number <br />
+        <label for="inputFirst" class="sr-only">First</label>
+        @Html.TextBox("Phone Number", "", new { type = "phoneNumber", id = "inputPhoneNumber", @class = "form-control", placeholder = "Phone Number", required = true, autofocus = true })
+    </p>
+    <p>
+        Email <br />
+        <label for="inputLast" class="sr-only">Last</label>
+        @Html.TextBox("Email", "", new { type = "Email", id = "inputEmail", @class = "form-control", placeholder = "Email", required = true, autofocus = true })
+    </p>
+}
