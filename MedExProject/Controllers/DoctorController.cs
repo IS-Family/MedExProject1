@@ -17,11 +17,11 @@ namespace MedExProject.Controllers
         [HttpPost]
         public String enterData(FormCollection form)
         {
-            String fName = form["First Name"].ToString();
-            String lName = form["Last Name"].ToString();
-            String  phone = form["Phone Number"].ToString();
-            String email = form["Email"].ToString();
-            return "Signing in : " + email;
+            ViewBag.fName = form["First Name"].ToString();
+            ViewBag.lName = form["Last Name"].ToString();
+            ViewBag.phone = form["Phone Number"].ToString();
+            ViewBag.email = form["Email"].ToString();
+            return "Signing in : " + ViewBag.email;
         }
 
         // GET: license information
