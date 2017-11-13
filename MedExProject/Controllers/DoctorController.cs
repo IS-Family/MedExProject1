@@ -38,6 +38,7 @@ namespace MedExProject.Controllers
         // GET: post information
         public ActionResult ViewInfo()
         {
+            ViewBag.list = initialList;
             return View();
         }
 
