@@ -8,6 +8,7 @@ namespace MedExProject.Controllers
 {
     public class DoctorController : Controller
     {
+
         // GET: personal information
         public ActionResult Personal()
         {
@@ -29,5 +30,12 @@ namespace MedExProject.Controllers
         {
             return View();
         }
+
+        // GET: post information
+        public ActionResult ViewInfo()
+        {
+            return View();
+        }
+
     }
 }
