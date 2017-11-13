@@ -205,6 +205,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Doctor\Personal.cshtml" />
     <Content Include="Views\Doctor\License.cshtml" />
+    <Content Include="Views\Doctor\ViewInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

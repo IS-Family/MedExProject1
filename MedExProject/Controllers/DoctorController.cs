@@ -8,6 +8,8 @@ namespace MedExProject.Controllers
 {
     public class DoctorController : Controller
     {
+        List<List<String>> initialList = new List<List<String>>();
+        int Index = 0;
         // GET: personal information
         public ActionResult Personal()
         {
@@ -15,13 +17,16 @@ namespace MedExProject.Controllers
         }
 
         [HttpPost]
-        public String enterData(FormCollection form)
+        public List<List<String>> enterData(FormCollection form)
         {
-            String fName = form["First Name"].ToString();
-            String lName = form["Last Name"].ToString();
-            String  phone = form["Phone Number"].ToString();
-            String email = form["Email"].ToString();
-            return "Signing in : " + email;
+            List<String> DoctorInfoList = new List<String>();
+            DoctorInfoList.Add(form["First Name"].ToString());
+            DoctorInfoList.Add(form["Last Name"].ToString());
+            DoctorInfoList.Add(form["Phone Number"].ToString());
+            DoctorInfoList.Add(form["Email"].ToString());
+            initialList.Add(DoctorInfoList);
+
+            return initialList;
         }
 
         // GET: license information
@@ -29,5 +34,12 @@ namespace MedExProject.Controllers
         {
             return View();
         }
+
+        // GET: post information
+        public ActionResult ViewInfo()
+        {
+            return View();
+        }
+
     }
 }
